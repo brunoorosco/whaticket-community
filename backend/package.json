@@ -10,7 +10,9 @@
     "dev:server": "ts-node-dev --respawn --transpile-only --ignore node_modules src/server.ts",
     "pretest": "NODE_ENV=test sequelize db:migrate && NODE_ENV=test sequelize db:seed:all",
     "test": "NODE_ENV=test jest",
-    "posttest": "NODE_ENV=test sequelize db:migrate:undo:all"
+    "posttest": "NODE_ENV=test sequelize db:migrate:undo:all",
+    "db:migrate": "npx sequelize db:migrate",
+    "db:seed": "npx sequelize db:seed:all"
   },
   "author": "",
   "license": "MIT",
@@ -38,7 +40,6 @@
     "sequelize-cli": "^5.5.1",
     "sequelize-typescript": "^1.1.0",
     "socket.io": "^3.0.5",
-    "uuid": "^8.3.2",
     "whatsapp-web.js": "^1.23.0",
     "yup": "^0.32.8"
   },
@@ -57,7 +58,6 @@
     "@types/node": "^14.11.8",
     "@types/pino-pretty": "~4.7.1",
     "@types/supertest": "^2.0.10",
-    "@types/uuid": "^8.3.3",
     "@types/validator": "^13.1.0",
     "@types/yup": "^0.29.8",
     "@typescript-eslint/eslint-plugin": "^4.4.0",
@@ -72,10 +72,9 @@
     "faker": "^5.1.0",
     "jest": "^26.6.0",
     "nodemon": "^2.0.4",
-    "prettier": "^2.1.2",
     "supertest": "^5.0.0",
     "ts-jest": "^26.4.1",
     "ts-node-dev": "^1.0.0-pre.63",
-    "typescript": "4.1.6"
+    "typescript": "4.9"
   }
 }
