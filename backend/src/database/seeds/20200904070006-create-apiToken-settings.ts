@@ -1,5 +1,5 @@
+import { randomUUID } from "crypto";
 import { QueryInterface } from "sequelize";
-import { v4 as uuidv4 } from "uuid";
 
 module.exports = {
   up: (queryInterface: QueryInterface) => {
@@ -8,7 +8,7 @@ module.exports = {
       [
         {
           key: "userApiToken",
-          value: uuidv4(),
+          value: randomUUID(),
           createdAt: new Date(),
           updatedAt: new Date()
         }
