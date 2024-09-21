@@ -1,0 +1,84 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "whaticket",
+    "collectionId": "17e198bd-4d08-46e4-b351-a5355f8a66df",
+    "dateExported": "2024-09-21T14:32:01.717Z",
+    "version": "1.2",
+    "folders": [
+        {
+            "_id": "9dc3479d-b162-429f-93a7-82d3e39f3074",
+            "name": "authentication",
+            "containerId": "",
+            "created": "2024-09-21T14:12:29.142Z",
+            "sortNum": 10000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "e5563207-a8b0-45df-b42a-126e6c8d910e",
+            "colId": "17e198bd-4d08-46e4-b351-a5355f8a66df",
+            "containerId": "9dc3479d-b162-429f-93a7-82d3e39f3074",
+            "name": "Login",
+            "url": "/auth/login",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-09-21T14:12:39.957Z",
+            "modified": "2024-09-21T14:28:08.650Z",
+            "headers": [
+                {
+                    "name": "Origin",
+                    "value": "http://localhost:3000"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"admin@whaticket.com\",\n  \"password\": \"123456\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "26f0d38e-0977-4e27-8313-acaec4a8606d",
+            "colId": "17e198bd-4d08-46e4-b351-a5355f8a66df",
+            "containerId": "9dc3479d-b162-429f-93a7-82d3e39f3074",
+            "name": "User Creatad",
+            "url": "/auth/signup",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-09-21T14:17:04.350Z",
+            "modified": "2024-09-21T14:31:45.089Z",
+            "headers": [
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"bruno@mail.com\",\n  \"password\": \"123456\",\n  \"name\":\"Bruno Orosco\"\n}",
+                "form": []
+            },
+            "preReq": {
+                "runRequests": [
+                    {
+                        "reqId": "e5563207-a8b0-45df-b42a-126e6c8d910e",
+                        "colId": "17e198bd-4d08-46e4-b351-a5355f8a66df",
+                        "triggerCondition": "run-var-empty",
+                        "triggerValue": "{{variable}}"
+                    }
+                ]
+            }
+        }
+    ],
+    "settings": {
+        "options": {
+            "baseUrl": "http://localhost:8080"
+        }
+    },
+    "ref": "XslYqm0QuhFrhCsMCXYFNkychktaBxuvqQkAs5CtrDYpR7MmDaacYMRPWAeuAr-09V0psIRA-2LGrJx_7HdtQA"
+}
